@@ -1,0 +1,30 @@
+name: 'Microcks Import GitHub action'
+author: 'Microcks.io'
+description: 'Import API specifications into Microcks'
+inputs:
+  specificationFiles:
+    description: "<specificationFile1[:primary],specificationFile2[:primary]>: Comma separated list of API specs to import with flag telling if it's a primary artifact. Example: 'specs/my-openapi.yaml:true,specs/my-postmancollection.json:false'"
+    required: true
+  microcksURL:
+    description: 'Microcks instance API endpoint'
+    required: true
+  keycloakClientId:
+    description: 'Keycloak Realm Service Account ClientId'
+    required: true
+  keycloakClientSecret:
+    description: 'Keycloak Realm Service Account ClientSecret'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://quay.io/microcks/microcks-cli:0.4.0'
+  entrypoint: '/usr/bin/bash'
+  args:
+  - '-c'
+  - >-
+    microcks-cli import '${{ inputs.specificationFiles }}' \
+      --microcksURL=${{ inputs.microcksURL }} \
+      --keycloakClientId=${{ inputs.keycloakClientId }} --keycloakClientSecret=${{ inputs.keycloakClientSecret }} \
+      --insecure
+branding:
+  icon: 'upload-cloud'  
+  color: 'blue'
