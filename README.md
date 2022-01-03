@@ -2,12 +2,14 @@
 
 ### What is it?
 
-This is a GitHub Action you may use in your Workflow to import into Microcks some API specification files. This allow keeping your API definitions, mocks and tests up-to-date into Microcks.. This action is basically a wrapper around the [Microcks CLI](https://github.com/microcks/microcks-cli) and provides the same configuration capabilities. 
+This is a GitHub Action you may use in your Workflow to import into Microcks some API specification files. This allow keeping your API definitions, mocks and tests up-to-date into Microcks.. This action is basically a wrapper around the [Microcks CLI](https://github.com/microcks/microcks-cli) and provides the same configuration capabilities.
 
 The `import` command of the CLI just need 1 argument:
+
 * `<specificationFile1[:primary],specificationFile2[:primary]>` : Comma separated list of API specs to import with flag telling if it's a primary artifact. Example: `'specs/my-openapi.yaml:true,specs/my-postmancollection.json:false'`
 
 With a bunch of mandatory flags:
+
 * `--microcksURL` for the Microcks API endpoint,
 * `--keycloakClientId` for the Keycloak Realm Service Account ClientId,
 * `--keycloakClientSecret` for the Keycloak Realm Service Account ClientSecret.
