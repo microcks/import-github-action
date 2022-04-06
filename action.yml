@@ -16,7 +16,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://quay.io/microcks/microcks-cli:0.5.0'
+  image: 'docker://quay.io/microcks/microcks-cli:0.5.1'
   entrypoint: '/usr/bin/bash'
   args:
   - '-c'
