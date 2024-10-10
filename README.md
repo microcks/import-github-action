@@ -21,6 +21,7 @@ Obviously we can find this action with [GitHub Actions Marketplace](https://gith
 You may add the Action to your Workflow directly from the GitHub UI.
 
 ![marketplace](./assets/marketplace.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmicrocks%2Fimport-github-action.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmicrocks%2Fimport-github-action?ref=badge_shield)
 
 #### Step 1 - Configure the GitHub action
 
@@ -45,3 +46,6 @@ jobs:
 As you probably saw just above, we do think it's a best practice to use GitHub Secrets (general or tied to `Environment` like in the example) to hold the Keycloak credentials (client Id and Secret). See below the Secrets configuration we've used for the example:
 
 ![secret configuration](./assets/secrets.png)
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmicrocks%2Fimport-github-action.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmicrocks%2Fimport-github-action?ref=badge_large)
